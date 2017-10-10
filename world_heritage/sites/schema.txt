@@ -1,0 +1,63 @@
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/coreapi+json
+Date: Fri, 03 Feb 2017 18:46:46 GMT
+Server: WSGIServer/0.1 Python/2.7.12
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "_meta": {
+        "title": "World Heritage Site"
+    }, 
+    "_type": "document", 
+    "sites": {
+        "list": {
+            "_type": "link", 
+            "action": "get", 
+            "fields": [
+                {
+                    "location": "query", 
+                    "name": "page"
+                }
+            ], 
+            "url": "/sites/"
+        }, 
+        "read": {
+            "_type": "link", 
+            "action": "get", 
+            "fields": [
+                {
+                    "location": "path", 
+                    "name": "id", 
+                    "required": true
+                }
+            ], 
+            "url": "/sites/{id}/"
+        }
+    }, 
+    "users": {
+        "list": {
+            "_type": "link", 
+            "action": "get", 
+            "fields": [
+                {
+                    "location": "query", 
+                    "name": "page"
+                }
+            ], 
+            "url": "/users/"
+        }, 
+        "read": {
+            "_type": "link", 
+            "action": "get", 
+            "fields": [
+                {
+                    "location": "path", 
+                    "name": "id", 
+                    "required": true
+                }
+            ], 
+            "url": "/users/{id}/"
+        }
+    }
+}
